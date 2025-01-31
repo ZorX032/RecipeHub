@@ -66,5 +66,5 @@ const usersSlice = createSlice({
     },
 });
 
-export const {clearSelectedUser} = usersSlice.actions;
+
 export default usersSlice.reducer;

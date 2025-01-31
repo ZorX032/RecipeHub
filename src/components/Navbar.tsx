@@ -1,10 +1,8 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-
-import { useState } from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {useState} from 'react';
 import {AuthState} from "../models/states/AuthState.ts";
 import {logout} from "../redux/slices/authSlice.ts";
-
 
 
 const Navbar = () => {
@@ -22,7 +20,7 @@ const Navbar = () => {
                         className="flex items-center px-4 py-2 bg-blue-800 rounded-lg"
                         onClick={() => setMenuOpen(!menuOpen)}
                     >
-                        <img src={user.image} alt="Avatar" className="w-8 h-8 rounded-full mr-2" />
+                        <img src={user.image} alt="Avatar" className="w-8 h-8 rounded-full mr-2"/>
                         {user.firstName}
                     </button>
                     {menuOpen && (

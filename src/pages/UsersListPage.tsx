@@ -17,9 +17,9 @@ const UsersListPage = () => {
         dispatch(fetchUsers({ page, searchQuery }));
     }, [dispatch, page, searchQuery]);
 
-    useEffect(() => {
-        setPage(1);
-    }, [searchQuery]);
+    // useEffect(() => {
+    //     setPage(1);
+    // }, [searchQuery]);
 
 
     console.log(users.length)

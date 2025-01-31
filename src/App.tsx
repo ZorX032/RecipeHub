@@ -30,8 +30,9 @@ function App() {
                         <Route path="/users" element={<UsersListPage/>}/>
                         <Route path="/recipes" element={<RecipesListPage/>}/>
                         <Route path="/recipes/:id" element={<RecipeDetailsPage/>}/>
-                        <Route path="*" element={<NotFoundPage/>}/>
+
                     </Route>
+                    <Route path="*" element={<NotFoundPage/>}/>
 
                 </Routes>
             </div>
