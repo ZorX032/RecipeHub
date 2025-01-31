@@ -18,7 +18,8 @@ export const fetchRecipes = createAsyncThunk("recipes/fetchRecipes",
 
         if (searchQuery){
             recipes = recipes.filter(recipes =>
-            recipes.name.toLowerCase().includes(searchQuery.toLowerCase()))
+                recipes.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                recipes.id.toString().includes(searchQuery));
         }
     // Должен возвращать `Recipe[]`
     return recipes // ✅ Возвращаем массив `Recipe[]`
