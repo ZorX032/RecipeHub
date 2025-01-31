@@ -8,5 +8,4 @@ export interface IUserWithTokens {
     image: string;
     accessToken: string;
     refreshToken: string;
-
 }
