@@ -2,13 +2,13 @@ import {createBrowserRouter} from "react-router-dom";
 
 
 import LoginPage from "../pages/LoginPage.tsx";
-import HomePage from "../pages/HomePage.tsx";
+import HomePageAuth from "../pages/HomePageAuth.tsx";
 
 
 
 export const routes = createBrowserRouter([
     {
-        path: '', element: <HomePage/>, children:[
+        path: '', element: <HomePageAuth/>, children:[
             {path: 'login', element:<LoginPage/>},
 
         ]

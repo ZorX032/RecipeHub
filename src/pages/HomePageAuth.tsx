@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const HomePage = () => {
+const HomePageAuth = () => {
     return (
         <div className="flex flex-col items-center justify-center h-screen">
             <h1 className="text-4xl">Welcome</h1>
@@ -9,4 +9,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default HomePageAuth;

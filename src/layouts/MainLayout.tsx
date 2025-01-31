@@ -1,6 +1,6 @@
 
 
-import HomePage from "../pages/HomePage.tsx";
+import HomePageAuth from "../pages/HomePageAuth.tsx";
 import {Outlet} from "react-router-dom";
 
 
@@ -8,7 +8,7 @@ import {Outlet} from "react-router-dom";
 export const MainLayout = () => {
     return (
         <>
-            <HomePage/>
+            <HomePageAuth/>
             <br/>
             <Outlet/>
 

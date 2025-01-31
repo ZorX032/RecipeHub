@@ -1,6 +1,6 @@
 import './App.css'
 import {Route, Routes} from "react-router-dom";
-import HomePage from "./pages/HomePage.tsx";
+import HomePageAuth from "./pages/HomePageAuth.tsx";
 import Login from "./pages/LoginPage.tsx";
 import Navbar from "./components/Navbar.tsx";
 import UserDetailsPage from "./pages/UserDetailsPage.tsx";
@@ -9,6 +9,7 @@ import NotFoundPage from "./pages/NotFoundPage.tsx";
 import RecipesListPage from "./pages/RecipesListPage.tsx";
 import RecipeDetailsPage from "./pages/RecipeDetailsPage.tsx";
 import ProtectedRoute from "./routes/protectedRout.tsx";
+import HomePageLogin from "./pages/HomePageLogin.tsx";
 
 
 function App() {
@@ -22,16 +23,19 @@ function App() {
 
                 {/*Відображення контенту незалогіненому користувачу*/}
                 <Routes>
-                    <Route path="/login" element={<Login/>}/>
-                    <Route path="/" element={<HomePage/>}/>
+                    <Route path="/" element={<HomePageAuth/>}/>
+
+
                     {/*Відображення контенту залогіненому користувачу*/}
                     <Route element={<ProtectedRoute/>}>
                         <Route path="/users/:id" element={<UserDetailsPage/>}/>
                         <Route path="/users" element={<UsersListPage/>}/>
                         <Route path="/recipes" element={<RecipesListPage/>}/>
                         <Route path="/recipes/:id" element={<RecipeDetailsPage/>}/>
+                        <Route path="/home" element={<HomePageLogin/>}/>
 
                     </Route>
+                    <Route path="/login" element={<Login/>}/>
                     <Route path="*" element={<NotFoundPage/>}/>
 
                 </Routes>

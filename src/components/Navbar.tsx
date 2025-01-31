@@ -13,7 +13,7 @@ const Navbar = () => {
     console.log(user)
     return (
         <nav className="flex justify-between items-center p-4 bg-blue-600 text-white">
-            <Link to="/" className="text-lg font-bold">Home</Link>
+            <Link to="/home" className="text-lg font-bold">Home</Link>
             {user ? (
                 <div className="relative">
                     <button

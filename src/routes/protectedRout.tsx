@@ -7,7 +7,7 @@ import {RootState} from "../redux/slices/store.ts";
 const ProtectedRoute = () => {
     const user = useSelector((state: RootState) => state.auth.user);
 
-    return user ? <Outlet /> : <Navigate to="/login" replace />;
+    return user ? <Outlet /> : <Navigate to="/" replace />;
 };
 
 export default ProtectedRoute;
