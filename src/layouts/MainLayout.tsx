@@ -1,6 +1,6 @@
 
 
-import Home from "../pages/Home.tsx";
+import HomePage from "../pages/HomePage.tsx";
 import {Outlet} from "react-router-dom";
 
 
@@ -8,7 +8,7 @@ import {Outlet} from "react-router-dom";
 export const MainLayout = () => {
     return (
         <>
-            <Home/>
+            <HomePage/>
             <br/>
             <Outlet/>
 

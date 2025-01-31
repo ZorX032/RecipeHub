@@ -2,13 +2,13 @@ import {createBrowserRouter} from "react-router-dom";
 
 
 import LoginPage from "../pages/LoginPage.tsx";
-import Home from "../pages/Home.tsx";
+import HomePage from "../pages/HomePage.tsx";
 
 
 
 export const routes = createBrowserRouter([
     {
-        path: '', element: <Home/>, children:[
+        path: '', element: <HomePage/>, children:[
             {path: 'login', element:<LoginPage/>},
 
         ]

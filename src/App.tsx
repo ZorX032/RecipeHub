@@ -1,12 +1,14 @@
 
 import './App.css'
 import {Route, Routes} from "react-router-dom";
-import Home from "./pages/Home.tsx";
+import HomePage from "./pages/HomePage.tsx";
 import Login from "./pages/LoginPage.tsx";
 import Navbar from "./components/Navbar.tsx";
-import UserDetails from "./pages/UserDetails.tsx";
+import UserDetailsPage from "./pages/UserDetailsPage.tsx";
 import UsersListPage from "./pages/UsersListPage.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
+import RecipesListPage from "./pages/RecipesListPage.tsx";
+import RecipeDetailsPage from "./pages/RecipeDetailsPage.tsx";
 
 
 
@@ -21,11 +23,13 @@ function App() {
           <Navbar/>
           <div className="container mx-auto p-4">
               <Routes>
-                  <Route path="/" element={<Home/>}/>
+                  <Route path="/" element={<HomePage/>}/>
                   <Route path="/login" element={<Login/>}/>
-                  <Route path="/users/:id" element={<UserDetails />} />
+                  <Route path="/users/:id" element={<UserDetailsPage />} />
                   <Route path="/users" element={<UsersListPage />} />
-                  <Route path="*" element={<NotFound />} />
+                  <Route path="/recipes" element={<RecipesListPage/>} />
+                  <Route path="/recipes/:id" element={<RecipeDetailsPage/>} />
+                  <Route path="*" element={<NotFoundPage />} />
               </Routes>
           </div>
       </div>

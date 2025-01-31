@@ -4,7 +4,7 @@ import {IUserWithTokens} from "../models/IUserWithTokens.ts";
 import {getUserById} from "../api/getUsers.ts";
 
 
-const UserDetails = () => {
+const UserDetailsPage = () => {
     const { id } = useParams<{ id: string }>();
     const [user, setUser] = useState<IUserWithTokens | null>(null);
     const [loading, setLoading] = useState(true);
@@ -40,4 +40,4 @@ const UserDetails = () => {
     );
 };
 
-export default UserDetails;
+export default UserDetailsPage;

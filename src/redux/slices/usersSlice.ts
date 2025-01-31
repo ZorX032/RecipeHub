@@ -8,7 +8,7 @@ export const fetchUsers = createAsyncThunk(
     async ({page, searchQuery}: { page: number; searchQuery: string }) => {
         const limit = 12;
         const skip = (page - 1) * limit;
-        // return await getUsers(limit, skip);
+
         let users = await getUsers(limit, skip)
         if (searchQuery) {
             users = users.filter(user =>
