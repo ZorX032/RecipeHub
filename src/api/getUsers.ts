@@ -2,7 +2,7 @@ import api from "./axiosInstance";
 import {IUserWithTokens} from "../models/IUserWithTokens.ts";
 
 
-export const getUsers = async (limit = 120, skip = 110): Promise<IUserWithTokens[]> => {
+export const getUsers = async (limit = 200, skip = 0): Promise<IUserWithTokens[]> => {
     const response = await api.get(`/users?limit=${limit}&skip=${skip}`);
     return response.data.users;
 };

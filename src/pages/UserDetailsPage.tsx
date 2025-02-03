@@ -40,7 +40,7 @@ const UserDetailsPage = () => {
             <p className="text-center text-gray-600">{user.phone}</p>
             <p className="text-center text-gray-600">Address: {user.address.city}, {user.address.street}</p>
 
-            {/* Список рецептов пользователя */}
+            {}
             <h2 className="text-xl font-bold mt-6">User Recipes</h2>
             <div className="grid grid-cols-2 gap-4 mt-4">
                 {recipes.length > 0 ? (

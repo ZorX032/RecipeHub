@@ -1,7 +1,7 @@
 import {IUserWithTokens} from "./IUserWithTokens.ts";
 
 export interface AuthResponse {
-    accessToken: string; // Лучше назвать accessToken
+    accessToken: string;
     user: IUserWithTokens;
     isAuthenticated: boolean;
 }
